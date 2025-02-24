@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on Eenosse&#39;s Blog</title>
+    <link>//localhost:1313/tags/post/</link>
+    <description>Recent content in Post on Eenosse&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Eenosse</copyright>
+    <lastBuildDate>Sun, 04 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I&#39;m jaeking it so gud</title>
+      <link>//localhost:1313/posts/post-sample-blog/</link>
+      <pubDate>Sun, 04 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/post-sample-blog/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in eleifend justo, vestibulum congue lacus. Quisque est libero, lacinia sed placerat ac, interdum id urna.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/post-sample-blog/cover.png" />
+    </item>
+    
+  </channel>
+</rss>
