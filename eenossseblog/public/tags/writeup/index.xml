@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeup on Eenosse&#39;s Blog</title>
+    <link>//localhost:1313/tags/writeup/</link>
+    <description>Recent content in Writeup on Eenosse&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Eenosse</copyright>
+    <lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sample Blog</title>
+      <link>//localhost:1313/posts/sample-blog/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/sample-blog/</guid>
+      <description>Test # test</description>
+      
+    </item>
+    
+  </channel>
+</rss>
