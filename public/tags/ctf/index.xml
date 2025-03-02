@@ -7,36 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Sample Blog 3</title>
-      <link>//localhost:1313/posts/sample-blog-3/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <title>PwnMe CTF 2025 Writeup</title>
+      <link>//localhost:1313/posts/pwnme-ctf-2025-writeup/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/sample-blog-3/</guid>
-      <description>Test #test</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/sample-blog-3/feature.jpg" />
-    </item>
-    
-    <item>
-      <title>Sample Blog 2</title>
-      <link>//localhost:1313/posts/sample-blog-2/</link>
-      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/posts/sample-blog-2/</guid>
-      <description>Test #test</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/sample-blog-2/cover.jpg" />
-    </item>
-    
-    <item>
-      <title>Sample Blog 1</title>
-      <link>//localhost:1313/posts/sample-blog-1/</link>
-      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/posts/sample-blog-1/</guid>
-      <description>Test #test</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/sample-blog-1/cover.jpg" />
+      <guid>//localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
+      <description>Overview #Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" />
     </item>
     
   </channel>
