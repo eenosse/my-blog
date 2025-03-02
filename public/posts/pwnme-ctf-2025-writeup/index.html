@@ -101,7 +101,7 @@
     "keywords": ["ctf","writeup","blog"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "545"
+    "wordCount": "40"
   }]
   </script>
 
@@ -491,7 +491,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-03-02T00:00:00&#43;00:00">2 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span>545 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2025-03-02T00:00:00&#43;00:00">2 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span>40 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
   
 
   
@@ -722,29 +722,20 @@
     </span>        
     
 </h3>
-<p>
-    <figure>
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /writeups/pwnme_ctf_2025/back_to_the_past_0_hu4389b41fee3bb5518fee99d6dc9e5cbb_21312_330x0_resize_box_3.png 330w,
-        /writeups/pwnme_ctf_2025/back_to_the_past_0_hu4389b41fee3bb5518fee99d6dc9e5cbb_21312_660x0_resize_box_3.png 660w,
-        /writeups/pwnme_ctf_2025/back_to_the_past_0_hu4389b41fee3bb5518fee99d6dc9e5cbb_21312_1024x0_resize_box_3.png 1024w,
-        /writeups/pwnme_ctf_2025/back_to_the_past_0_hu4389b41fee3bb5518fee99d6dc9e5cbb_21312_1320x0_resize_box_3.png 2x"
-        src="/writeups/pwnme_ctf_2025/back_to_the_past_0_hu4389b41fee3bb5518fee99d6dc9e5cbb_21312_660x0_resize_box_3.png"
-        alt="back_to_the_past_0"
-      />
-      
-    </figure>
-</p>
-<p>We are given a binary executable that encrypts the flag file.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast
-</span></span><span class="line"><span class="cl">Usage: ./backToThePast &lt;filename&gt;
-</span></span><span class="line"><span class="cl">eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ <span class="nb">echo</span> <span class="m">1234</span> &gt; <span class="nb">test</span>
-</span></span><span class="line"><span class="cl">eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast <span class="nb">test</span>
-</span></span><span class="line"><span class="cl"><span class="nb">time</span> : <span class="m">1740925301</span>
-</span></span></code></pre></div><p>Running the binary, we see that it prints out the current timestamp. So it might use the timestamp for encryption. Let&rsquo;s check that in IDA:</p>
+<!-- ![back_to_the_past_0](writeups/pwnme_ctf_2025/back_to_the_past_0.png)
+
+We are given a binary executable that encrypts the flag file. 
+
+```bash
+eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast
+Usage: ./backToThePast <filename>
+eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ echo 1234 > test
+eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast test
+time : 1740925301
+```
+
+Running the binary, we see that it prints out the current timestamp. So it might use the timestamp for encryption. Let's check that in IDA:
+
 <details>
     <summary>Click to expand</summary>
     <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="kr">__fastcall</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span>
@@ -815,45 +806,60 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
 </details>
-<p>Indeed, it uses the timestamp to set seed, then XOR our file with random numbers and write it to a <code>.enc</code> file.</p>
-<p>Things should be easy enough. However, when I tried to write a solve script using libc&rsquo;s <code>random</code>, it didn&rsquo;t give the right result. After debugging, I noticed that the random numbers of the program were different from mine. So something has been changed 🤔.</p>
-<p>It turns out the <code>srand</code> and <code>rand</code> functions are not the standard libc functions, but rather custom functions:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kr">__int64</span> <span class="kr">__fastcall</span> <span class="nf">srand</span><span class="p">(</span><span class="kt">int</span> <span class="n">a1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">__int64</span> <span class="n">result</span><span class="p">;</span> <span class="c1">// rax
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)(</span><span class="n">a1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">seed</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="nf">rand</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">seed</span> <span class="o">=</span> <span class="mh">0x5851F42D4C957F2DLL</span> <span class="o">*</span> <span class="n">seed</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kr">__int64</span><span class="p">)</span><span class="n">seed</span> <span class="o">&gt;&gt;</span> <span class="mh">0x21</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>The <code>srand</code> function actually sets the seed to be equal to <code>a1 - 1</code>. I&rsquo;m not sure if <code>rand</code> is different from the standard one, but we&rsquo;ll not care about that.</p>
-<p>From this, I wrote a quick script to solve the challenge. Given that the challenge&rsquo;s description said <code>the binary would have been run in May 2024</code>, I bruteforced the timestamp from May to June:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;flag.enc&#34;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">seed</span> <span class="o">=</span> <span class="mi">1740845724</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">srand</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">seed</span>
-</span></span><span class="line"><span class="cl">    <span class="n">seed</span> <span class="o">=</span> <span class="n">s</span> <span class="o">-</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rand</span><span class="p">():</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">seed</span>
-</span></span><span class="line"><span class="cl">    <span class="n">seed</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x5851F42D4C957F2D</span> <span class="o">*</span> <span class="n">seed</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xffffffffffffffff</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">seed</span> <span class="o">&gt;&gt;</span> <span class="mh">0x21</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1714521600</span><span class="p">,</span> <span class="mi">1717200000</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">srand</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">msg</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rand_num</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="n">msg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span> <span class="o">^</span> <span class="p">(</span><span class="n">rand_num</span> <span class="o">%</span> <span class="mh">0x7f</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">msg</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="sa">b</span><span class="s2">&#34;PWNME&#34;</span> <span class="ow">in</span> <span class="n">msg</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</span></span></code></pre></div><p>Running this will give us the flag: <code>PWNME{4baf3723f62a15f22e86d57130bc40c3}</code></p>
+
+Indeed, it uses the timestamp to set seed, then XOR our file with random numbers and write it to a `.enc` file. 
+
+Things should be easy enough. However, when I tried to write a solve script using libc's `random`, it didn't give the right result. After debugging, I noticed that the random numbers of the program were different from mine. So something has been changed 🤔. 
+
+It turns out the `srand` and `rand` functions are not the standard libc functions, but rather custom functions:
+
+```c
+__int64 __fastcall srand(int a1)
+{
+    __int64 result; // rax
+
+    result = (unsigned int)(a1 - 1);
+    seed = result;
+    return result;
+}
+```
+
+```c
+unsigned __int64 rand()
+{
+    seed = 0x5851F42D4C957F2DLL * seed + 1;
+    return (unsigned __int64)seed >> 0x21;
+}
+```
+
+The `srand` function actually sets the seed to be equal to `a1 - 1`. I'm not sure if `rand` is different from the standard one, but we'll not care about that.
+
+From this, I wrote a quick script to solve the challenge. Given that the challenge's description said `the binary would have been run in May 2024`, I bruteforced the timestamp from May to June:
+
+```py
+data = open("flag.enc", 'rb').read()
+
+seed = 1740845724
+def srand(s):
+    global seed
+    seed = s - 1
+def rand():
+    global seed
+    seed = (0x5851F42D4C957F2D * seed + 1) & 0xffffffffffffffff
+    return seed >> 0x21
+
+for t in range(1714521600, 1717200000):
+    srand(t)
+    msg = []
+    for c in data:
+        rand_num = rand()
+        msg.append(c ^ (rand_num % 0x7f))
+    msg = bytes(msg)
+    if b"PWNME" in msg:
+        print(msg)
+```
+
+Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}` -->
 
 
 <h3 class="relative group">C4 License 
