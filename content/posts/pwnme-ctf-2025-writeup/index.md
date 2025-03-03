@@ -15,7 +15,7 @@ Here are some of the challenges that I solved during PwnMe CTF 2025:
 ## Rev
 ### Back to the past
 
-<!-- ![back_to_the_past_0](writeups/pwnme_ctf_2025/back_to_the_past_0.png)
+![back_to_the_past_0](writeups/pwnme_ctf_2025/back_to_the_past_0.png)
 
 We are given a binary executable that encrypts the flag file. 
 
@@ -152,11 +152,13 @@ for t in range(1714521600, 1717200000):
         print(msg)
 ```
 
-Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}` -->
+Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}`
 
 ### C4 License
 
-Holder
+![c4_license_0](writeups/pwnme_ctf_2025/c4_license_0.png)
+
+
 
 ### Mimirev
 
