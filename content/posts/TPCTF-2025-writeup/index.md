@@ -1,6 +1,6 @@
 ---
 title: "TPCTF 2025 Writeup - magicfile"
-date: 2025-03-10
+date: 2025-03-18
 draft: false
 description: "Writeup for some challenges that I solved in PwnMe CTF 2025."
 tags: ["ctf", "writeup", "Reverse Engineering"]
