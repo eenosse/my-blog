@@ -3,11 +3,7 @@ title: "PwnMe CTF 2025 Writeup"
 date: 2025-03-03
 draft: false
 description: "Writeup for some challenges that I solved in PwnMe CTF 2025."
-<<<<<<< HEAD
 tags: ["ctf", "writeup", "Reverse Engineering"]
-=======
-tags: ["ctf", "writeup"]
->>>>>>> 5675d4e5d1630bcb8b820f297fae9b36596b7af4
 # series: ["Documentation"]
 # series_order: 13
 ---

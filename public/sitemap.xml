@@ -4,7 +4,6 @@
 
   <url>
     <loc>//localhost:1313/</loc>
-<<<<<<< HEAD
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -12,9 +11,6 @@
   <url>
     <loc>//localhost:1313/posts/tpctf-2025-writeup/</loc>
     <lastmod>2025-03-10T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
->>>>>>> 5675d4e5d1630bcb8b820f297fae9b36596b7af4
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

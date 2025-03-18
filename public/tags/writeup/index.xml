@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -23,7 +22,7 @@
     <item>
       <title>PwnMe CTF 2025 Writeup</title>
       <link>//localhost:1313/posts/pwnme-ctf-2025-writeup/</link>
-      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
       <description>Overview #Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
@@ -32,28 +31,3 @@
     
   </channel>
 </rss>
-=======
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Writeup on Eenosse&#39;s Blog</title>
-    <link>//localhost:1313/tags/writeup/</link>
-    <description>Recent content in Writeup on Eenosse&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>PwnMe CTF 2025 Writeup</title>
-      <link>//localhost:1313/posts/pwnme-ctf-2025-writeup/</link>
-      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
-      <description>Overview # Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" />
-    </item>
-    
-  </channel>
-</rss>
->>>>>>> 5675d4e5d1630bcb8b820f297fae9b36596b7af4
