@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>PwnMe CTF 2025 Writeup &middot; Eenosse&#39;s Blog</title>
-  <meta name="title" content="PwnMe CTF 2025 Writeup &middot; Eenosse&#39;s Blog" />
+  <title>TPCTF 2025 Writeup - magicfile &middot; Eenosse&#39;s Blog</title>
+  <meta name="title" content="TPCTF 2025 Writeup - magicfile &middot; Eenosse&#39;s Blog" />
   
   <meta name="description" content="Writeup for some challenges that I solved in PwnMe CTF 2025." />
   <meta name="keywords" content="ctf, writeup, Reverse Engineering, " />
   
   
-  <link rel="canonical" href="//localhost:1313/posts/pwnme-ctf-2025-writeup/" />
+  <link rel="canonical" href="//localhost:1313/posts/tpctf-2025-writeup/" />
   
   
   
@@ -64,16 +64,16 @@
   
   
   
-  <meta property="og:title" content="PwnMe CTF 2025 Writeup" />
+  <meta property="og:title" content="TPCTF 2025 Writeup - magicfile" />
 <meta property="og:description" content="Writeup for some challenges that I solved in PwnMe CTF 2025." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//localhost:1313/posts/pwnme-ctf-2025-writeup/" /><meta property="og:image" content="//localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2025-03-02T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-03-02T00:00:00+00:00" />
+<meta property="og:url" content="//localhost:1313/posts/tpctf-2025-writeup/" /><meta property="og:image" content="//localhost:1313/posts/tpctf-2025-writeup/featured.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-03-10T00:00:00+00:00" />
 
 
   <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="//localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" /><meta name="twitter:title" content="PwnMe CTF 2025 Writeup"/>
+<meta name="twitter:image" content="//localhost:1313/posts/tpctf-2025-writeup/featured.png" /><meta name="twitter:title" content="TPCTF 2025 Writeup - magicfile"/>
 <meta name="twitter:description" content="Writeup for some challenges that I solved in PwnMe CTF 2025."/>
 
   
@@ -82,26 +82,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "PwnMe CTF 2025 Writeup",
-    "headline": "PwnMe CTF 2025 Writeup",
+    "name": "TPCTF 2025 Writeup - magicfile",
+    "headline": "TPCTF 2025 Writeup - magicfile",
     "description": "Writeup for some challenges that I solved in PwnMe CTF 2025.",
-    "abstract": "Overview #\rHere are some of the challenges that I solved during PwnMe CTF 2025:",
+    "abstract": "Overview #\rMy quick writeup for magicfile challenge from TPCTF 2025.",
     "inLanguage": "en",
-    "url" : "\/\/localhost:1313\/posts\/pwnme-ctf-2025-writeup\/",
+    "url" : "\/\/localhost:1313\/posts\/tpctf-2025-writeup\/",
     "author" : {
       "@type": "Person",
       "name": "Eenosse"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-03-02T00:00:00\u002b00:00",
-    "datePublished": "2025-03-02T00:00:00\u002b00:00",
+    "dateCreated": "2025-03-10T00:00:00\u002b00:00",
+    "datePublished": "2025-03-10T00:00:00\u002b00:00",
     
-    "dateModified": "2025-03-02T00:00:00\u002b00:00",
+    "dateModified": "2025-03-10T00:00:00\u002b00:00",
     
     "keywords": ["ctf","writeup","Reverse Engineering"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "40"
+    "wordCount": "414"
   }]
   </script>
 
@@ -420,7 +420,7 @@
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/posts/pwnme-ctf-2025-writeup/feature_hu30e3ce9b676a14a15ad185f83c86038b_51851_1200x0_resize_box_3.png);">
+    style="background-image:url(/posts/tpctf-2025-writeup/featured_hu638f0e17fcf5cf04fb214beebbb175c0_3309407_1200x0_resize_box_3.png);">
     
 
 
@@ -446,7 +446,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      PwnMe CTF 2025 Writeup
+      TPCTF 2025 Writeup - magicfile
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -491,7 +491,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-03-02T00:00:00&#43;00:00">2 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span>40 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2025-03-10T00:00:00&#43;00:00">10 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span>414 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
   
 
   
@@ -602,19 +602,7 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#rev">Rev</a>
-      <ul>
-        <li><a href="#back-to-the-past">Back to the past</a></li>
-        <li><a href="#c4-license">C4 License</a></li>
-        <li><a href="#mimirev">Mimirev</a></li>
-        <li><a href="#super-secure-network">Super secure network</a></li>
-      </ul>
-    </li>
-    <li><a href="#misc">Misc</a>
-      <ul>
-        <li><a href="#decode-runner">Decode Runner</a></li>
-      </ul>
-    </li>
+    <li><a href="#magicfile">Magicfile</a></li>
   </ul>
 </nav>
   </div>
@@ -629,19 +617,7 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#rev">Rev</a>
-      <ul>
-        <li><a href="#back-to-the-past">Back to the past</a></li>
-        <li><a href="#c4-license">C4 License</a></li>
-        <li><a href="#mimirev">Mimirev</a></li>
-        <li><a href="#super-secure-network">Super secure network</a></li>
-      </ul>
-    </li>
-    <li><a href="#misc">Misc</a>
-      <ul>
-        <li><a href="#decode-runner">Decode Runner</a></li>
-      </ul>
-    </li>
+    <li><a href="#magicfile">Magicfile</a></li>
   </ul>
 </nav>
   </div>
@@ -697,233 +673,79 @@
     </span>        
     
 </h2>
-<p>Here are some of the challenges that I solved during PwnMe CTF 2025:</p>
+<p>My quick writeup for <code>magicfile</code> challenge from TPCTF 2025.</p>
 
 
-<h2 class="relative group">Rev 
-    <div id="rev" class="anchor"></div>
+<h2 class="relative group">Magicfile 
+    <div id="magicfile" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#rev" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#magicfile" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-
-
-<h3 class="relative group">Back to the past 
-    <div id="back-to-the-past" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#back-to-the-past" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<!-- ![back_to_the_past_0](writeups/pwnme_ctf_2025/back_to_the_past_0.png)
-
-We are given a binary executable that encrypts the flag file. 
-
-```bash
-eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast
-Usage: ./backToThePast <filename>
-eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ echo 1234 > test
-eenosse@ITDOLOZI:~/pwnmeCTF_2025/rev_Back_to_the_past$ ./backToThePast test
-time : 1740925301
-```
-
-Running the binary, we see that it prints out the current timestamp. So it might use the timestamp for encryption. Let's check that in IDA:
-
-<details>
-    <summary>Click to expand</summary>
-    <div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="kr">__fastcall</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">envp</span><span class="p">)</span>
+<p>We&rsquo;re given a binary file which asks us for a flag. The flag must be 48 characters long.</p>
+<p>If we type in a random strings like <code>'a'*48</code>, we will get the output: <code>ASCII text, with no line terminators</code>. So this seems to mimic the <code>file</code> command in Linux. We can look up the source code on Github and compare it with our file.</p>
+<p>The flag checking seems to be happening in <code>sub_59A0</code>, as it&rsquo;s the only place that uses our input:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">_BYTE</span> <span class="o">*</span><span class="kr">__fastcall</span> <span class="nf">sub_59A0</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">__int64</span> <span class="n">ms</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">__int64</span> <span class="n">input</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="n">input_len</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">__int64</span> <span class="n">input_</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">__int64</span> <span class="n">a5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">__int64</span> <span class="n">a6</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// cl
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">v5</span><span class="p">;</span> <span class="c1">// edx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span> <span class="n">v6</span><span class="p">;</span> <span class="c1">// cl
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">v7</span><span class="p">;</span> <span class="c1">// edx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span> <span class="n">v8</span><span class="p">;</span> <span class="c1">// cl
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">v9</span><span class="p">;</span> <span class="c1">// eax
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span> <span class="n">v10</span><span class="p">;</span> <span class="c1">// cl
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">v11</span><span class="p">;</span> <span class="c1">// [rsp+1Ch] [rbp-124h]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">v12</span><span class="p">;</span> <span class="c1">// [rsp+20h] [rbp-120h]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">__int64</span> <span class="n">v13</span><span class="p">;</span> <span class="c1">// [rsp+28h] [rbp-118h]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">char</span> <span class="n">v14</span><span class="p">[</span><span class="mi">264</span><span class="p">];</span> <span class="c1">// [rsp+30h] [rbp-110h] BYREF
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kr">__int64</span> <span class="n">v15</span><span class="p">;</span> <span class="c1">// [rsp+138h] [rbp-8h]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">    <span class="n">v15</span> <span class="o">=</span> <span class="nf">__readfsqword</span><span class="p">(</span><span class="mh">0x28u</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="n">argc</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">ms</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="n">v12</span> <span class="o">=</span> <span class="nf">time</span><span class="p">(</span><span class="mi">0LL</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="n">envp</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="s">&#34;time : %ld</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">v12</span><span class="p">,</span> <span class="n">v5</span><span class="p">,</span> <span class="n">v6</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">srand</span><span class="p">(</span><span class="n">v12</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="n">v13</span> <span class="o">=</span> <span class="nf">fopen64</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">&#34;rb+&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span> <span class="n">v13</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="p">(</span> <span class="mi">1</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="n">v11</span> <span class="o">=</span> <span class="nf">getc</span><span class="p">(</span><span class="n">v13</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="p">(</span> <span class="n">v11</span> <span class="o">==</span> <span class="mh">0xFFFFFFFF</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">                <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">break</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                <span class="nf">fseek</span><span class="p">(</span><span class="n">v13</span><span class="p">,</span> <span class="mh">0xFFFFFFFFFFFFFFFFLL</span><span class="p">,</span> <span class="mi">1LL</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="n">v9</span> <span class="o">=</span> <span class="nf">rand</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">                <span class="nf">fputc</span><span class="p">(</span><span class="n">v11</span> <span class="o">^</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)(</span><span class="n">v9</span> <span class="o">%</span> <span class="mh">0x7F</span><span class="p">),</span> <span class="n">v13</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="nf">fclose</span><span class="p">(</span><span class="n">v13</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="nf">strcpy</span><span class="p">(</span><span class="n">v14</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-</span></span><span class="line"><span class="cl">            <span class="nf">strcat</span><span class="p">(</span><span class="n">v14</span><span class="p">,</span> <span class="s">&#34;.enc&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nf">rename</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v14</span><span class="p">)</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nf">printf</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="s">&#34;Can&#39;t rename %s filename to %s.enc&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                    <span class="n">v10</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="k">else</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nf">printf</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="s">&#34;Can&#39;t open file %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">v7</span><span class="p">,</span> <span class="n">v8</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0LL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nf">sub_EBC0</span><span class="p">(</span><span class="n">ms</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">input_len</span><span class="p">,</span> <span class="n">input_</span><span class="p">,</span> <span class="n">a5</span><span class="p">,</span> <span class="n">a6</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">      <span class="o">||</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nf">file_buffer</span><span class="p">(</span><span class="n">ms</span><span class="p">,</span> <span class="mh">0xFFFFFFFFLL</span><span class="p">,</span> <span class="mi">0LL</span><span class="p">,</span> <span class="mi">0LL</span><span class="p">,</span> <span class="n">input</span><span class="p">,</span> <span class="n">input_len</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0xFFFFFFFF</span> <span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nf">printf</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="s">&#34;Usage: %s &lt;filename&gt;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">argv</span><span class="p">,</span> <span class="p">(</span><span class="n">_DWORD</span><span class="p">)</span><span class="n">envp</span><span class="p">,</span> <span class="n">v3</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0LL</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nf">file_getbuffer</span><span class="p">(</span><span class="n">ms</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></div>
-</details>
-
-Indeed, it uses the timestamp to set seed, then XOR our file with random numbers and write it to a `.enc` file. 
-
-Things should be easy enough. However, when I tried to write a solve script using libc's `random`, it didn't give the right result. After debugging, I noticed that the random numbers of the program were different from mine. So something has been changed 🤔. 
-
-It turns out the `srand` and `rand` functions are not the standard libc functions, but rather custom functions:
-
-```c
-__int64 __fastcall srand(int a1)
-{
-    __int64 result; // rax
-
-    result = (unsigned int)(a1 - 1);
-    seed = result;
-    return result;
-}
-```
-
-```c
-unsigned __int64 rand()
-{
-    seed = 0x5851F42D4C957F2DLL * seed + 1;
-    return (unsigned __int64)seed >> 0x21;
-}
-```
-
-The `srand` function actually sets the seed to be equal to `a1 - 1`. I'm not sure if `rand` is different from the standard one, but we'll not care about that.
-
-From this, I wrote a quick script to solve the challenge. Given that the challenge's description said `the binary would have been run in May 2024`, I bruteforced the timestamp from May to June:
-
-```py
-data = open("flag.enc", 'rb').read()
-
-seed = 1740845724
-def srand(s):
-    global seed
-    seed = s - 1
-def rand():
-    global seed
-    seed = (0x5851F42D4C957F2D * seed + 1) & 0xffffffffffffffff
-    return seed >> 0x21
-
-for t in range(1714521600, 1717200000):
-    srand(t)
-    msg = []
-    for c in data:
-        rand_num = rand()
-        msg.append(c ^ (rand_num % 0x7f))
-    msg = bytes(msg)
-    if b"PWNME" in msg:
-        print(msg)
-```
-
-Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}` -->
-
-
-<h3 class="relative group">C4 License 
-    <div id="c4-license" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#c4-license" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Holder</p>
-
-
-<h3 class="relative group">Mimirev 
-    <div id="mimirev" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#mimirev" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Holder</p>
-
-
-<h3 class="relative group">Super secure network 
-    <div id="super-secure-network" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#super-secure-network" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Holder</p>
-
-
-<h2 class="relative group">Misc 
-    <div id="misc" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#misc" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-
-<h3 class="relative group">Decode Runner 
-    <div id="decode-runner" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#decode-runner" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Holder</p>
+</span></span></code></pre></div><p>This function will compare our input with some defined rules and return the result string. Checking the second function, we can see some strings like <code>[try zmagic %d]</code>, <code>[try tar %d]</code>, &hellip; Looking this up, it&rsquo;s the function <code>file_buffer</code>. You can find this <a href="https://github.com/file/file/blob/master/src/funcs.c#L323" target="_blank">here</a>.</p>
+<p>Through debugging, I noticed that if we type in the flag format, it will stop for a while at <code>sub_153B0</code>, which is <code>file_softmagic</code>. This function will check our input using some &ldquo;magic rules&rdquo;. The comparing function is <code>sub_13A70</code>.</p>
+<p>After more debugging, the flow seems to be like this:</p>
+<ol>
+<li>It will iterate through each magic rules by <code>v25 = a2 + 0x178LL * v20;</code>.</li>
+<li>It will first check that the first letters are <code>TPCTF</code>. If it&rsquo;s correct, it keeps checking, otherwise it will move to other rules (if any).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">check_flag_magic</span> <span class="o">=</span> <span class="nf">magiccheck</span><span class="p">(</span><span class="n">v23</span><span class="p">,</span> <span class="n">a2</span> <span class="o">+</span> <span class="mh">0x178LL</span> <span class="o">*</span> <span class="n">v20</span><span class="p">,</span> <span class="n">v29</span><span class="p">,</span> <span class="n">v30</span><span class="p">,</span> <span class="n">v31</span><span class="p">,</span> <span class="n">v32</span><span class="p">);</span>
+</span></span></code></pre></div><ol start="3">
+<li>It will iterate through a sort of list of rules that check each letter. If the rule contains a result string, it will stop and return that string.</li>
+</ol>
+<p>From the code, it seems like each rule is 0x178 bytes long. So I debugged to find the offset of the rules and dump it out:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;magicfile_c970e3503feebf8274571f09d27cdd2f&#34;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sus</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()[</span><span class="mh">0x212F4</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sus</span><span class="p">),</span> <span class="mh">0xbc</span><span class="o">*</span><span class="mi">2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">sus</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mh">0xbc</span><span class="o">*</span><span class="mi">2</span><span class="p">])</span>
+</span></span></code></pre></div><p>So what is the output when we input the right flag? By stringging the binary file, we can find that it&rsquo;s <code>Congratulations! You got the flag.</code> Looking for this in our dump, it&rsquo;s this rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="sa">b</span><span class="s1">&#39;+</span><span class="se">\x00\x00\x00</span><span class="s1">=</span><span class="se">\x00\x01\x00\x00\x00\x00\x00</span><span class="s1">/</span><span class="se">\x00\x00\x00\x00\x00\x00\x00\xd4</span><span class="s1">+</span><span class="se">\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00</span><span class="s1">}</span><span class="se">\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00</span><span class="s1">Congratulations! You got the flag.</span><span class="se">\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00</span><span class="s1">&#39;</span>
+</span></span></code></pre></div><p>Notice the <code>}</code> character there. Looking above this, we can see the flag:</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /writeups/TPCTF_2025/img1_hu6ecc9e9e221bf65cafc8becc77b48207_30461_330x0_resize_box_3.png 330w,
+        /writeups/TPCTF_2025/img1_hu6ecc9e9e221bf65cafc8becc77b48207_30461_660x0_resize_box_3.png 660w,
+        /writeups/TPCTF_2025/img1_hu6ecc9e9e221bf65cafc8becc77b48207_30461_1024x0_resize_box_3.png 1024w,
+        /writeups/TPCTF_2025/img1_hu6ecc9e9e221bf65cafc8becc77b48207_30461_1320x0_resize_box_3.png 2x"
+        src="/writeups/TPCTF_2025/img1_hu6ecc9e9e221bf65cafc8becc77b48207_30461_660x0_resize_box_3.png"
+        alt="img1"
+      />
+      
+    </figure>
+</p>
 
           
           
@@ -946,8 +768,8 @@ Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}` --
           
         
       <script>
-        var oid = "views_posts\/pwnme-ctf-2025-writeup\/index.md"
-        var oid_likes = "likes_posts\/pwnme-ctf-2025-writeup\/index.md"
+        var oid = "views_posts\/TPCTF-2025-writeup\/index.md"
+        var oid_likes = "likes_posts\/TPCTF-2025-writeup\/index.md"
       </script>
       
       
@@ -967,30 +789,30 @@ Running this will give us the flag: `PWNME{4baf3723f62a15f22e86d57130bc40c3}` --
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/tpctf-2025-writeup/">
+            <a class="flex group mr-3" href="/posts/pwnme-ctf-2025-writeup/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >TPCTF 2025 Writeup - magicfile</span
+                  >PwnMe CTF 2025 Writeup</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-03-10T00:00:00&#43;00:00">10 March 2025</time>
+                    <time datetime="2025-03-02T00:00:00&#43;00:00">2 March 2025</time>
                   
                 </span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
