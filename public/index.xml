@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eenosse&#39;s Blog</title>
-    <link>//localhost:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Eenosse&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TPCTF 2025 Writeup - magicfile</title>
-      <link>//localhost:1313/posts/tpctf-2025-writeup/</link>
+      <link>http://localhost:1313/posts/tpctf-2025-writeup/</link>
       <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/tpctf-2025-writeup/</guid>
-      <description>Overview #My quick writeup for magicfile challenge from TPCTF 2025.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/tpctf-2025-writeup/featured.png" />
+      <guid>http://localhost:1313/posts/tpctf-2025-writeup/</guid>
+      <description>Overview # My quick writeup for magicfile challenge from TPCTF 2025.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/tpctf-2025-writeup/featured.png" />
     </item>
     
     <item>
       <title>PwnMe CTF 2025 Writeup</title>
-      <link>//localhost:1313/posts/pwnme-ctf-2025-writeup/</link>
+      <link>http://localhost:1313/posts/pwnme-ctf-2025-writeup/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
-      <description>Overview #Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" />
+      <guid>http://localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
+      <description>Overview # Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" />
     </item>
     
   </channel>
