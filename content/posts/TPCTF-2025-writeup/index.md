@@ -76,5 +76,5 @@ b'+\x00\x00\x00=\x00\x01\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\xd4+\x
 
 Notice the `}` character there. Looking above this, we can see the flag:
 
-![magicfile_1](writeups/TPCTF_2025/magicfile_1.png)
+![magicfile_1](img/magicfile_1.png)
 
