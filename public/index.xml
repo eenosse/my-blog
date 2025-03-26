@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTB Cyber Apocalypse 2025 Writeup - Tales for the Brave</title>
+      <link>http://localhost:1313/posts/htb-ca-2025-writeup/</link>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/htb-ca-2025-writeup/</guid>
+      <description>Overview # This week I played HTB Cyber Apocalypse 2025 and did all Forensics challenges!</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/htb-ca-2025-writeup/featured.jpg" />
+    </item>
     
     <item>
       <title>TPCTF 2025 Writeup - magicfile</title>
