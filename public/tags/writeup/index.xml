@@ -6,8 +6,18 @@
     <description>Recent content in Writeup on Eenosse&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Eenosse</copyright>
+    <lastBuildDate>Mon, 08 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WannaGame Championship 2025 Writeup</title>
+      <link>http://localhost:1313/posts/wannagame-ctf-2025-writeup/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/wannagame-ctf-2025-writeup/</guid>
+      <description>Overview #Last week I played WannaGame Championship 2025 with my team BKISC.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/wannagame-ctf-2025-writeup/featured.png" />
+    </item>
     
     <item>
       <title>HTB Cyber Apocalypse 2025 Writeup - Tales for the Brave</title>
@@ -15,7 +25,7 @@
       <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/htb-ca-2025-writeup/</guid>
-      <description>Overview # This week I played HTB Cyber Apocalypse 2025 and did all Forensics challenges!</description>
+      <description>Overview #This week I played HTB Cyber Apocalypse 2025 and did all Forensics challenges!</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/htb-ca-2025-writeup/featured.jpg" />
     </item>
     
@@ -25,7 +35,7 @@
       <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/tpctf-2025-writeup/</guid>
-      <description>Overview # My quick writeup for magicfile challenge from TPCTF 2025.</description>
+      <description>Overview #My quick writeup for magicfile challenge from TPCTF 2025.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/tpctf-2025-writeup/featured.png" />
     </item>
     
@@ -35,7 +45,7 @@
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/pwnme-ctf-2025-writeup/</guid>
-      <description>Overview # Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
+      <description>Overview #Here are some of the challenges that I solved during PwnMe CTF 2025:</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/pwnme-ctf-2025-writeup/feature.png" />
     </item>
     

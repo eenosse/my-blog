@@ -6,15 +6,35 @@
     <description>Recent content in Tags on Eenosse&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Eenosse</copyright>
-    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Eenosse</copyright>
+    <lastBuildDate>Mon, 08 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ctf</title>
       <link>http://localhost:1313/tags/ctf/</link>
-      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/ctf/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Forensic</title>
+      <link>http://localhost:1313/tags/forensic/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/forensic/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup</title>
+      <link>http://localhost:1313/tags/writeup/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/writeup/</guid>
       <description></description>
       
     </item>
@@ -45,16 +65,6 @@
       <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/reverse-engineering/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Writeup</title>
-      <link>http://localhost:1313/tags/writeup/</link>
-      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/writeup/</guid>
       <description></description>
       
     </item>
